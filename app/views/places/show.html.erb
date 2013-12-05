@@ -1,0 +1,7 @@
+<h1> <%= @place.name %> </h1>
+<h3> <%= @place.food_type %> </h3>
+<h3> Price Range (1-5): <%= @place.price %> </h3>
+<%= image_tag @place.image_url, width: "75%" %>
+<h4><a href="http://<%= @place.website %>" target="_blank">website</a></h3>
+<h3> <%= @place.hours %> </h3>
+<p><%= link_to 'home', root_path %></p>

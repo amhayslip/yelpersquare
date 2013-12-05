@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Locations</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+	
+  <tbody>
+    <% @places.each do |place| %>
+      <tr>
+      	<td><%= image_tag place.image_url, width: "100px" %> </td>
+        <td><%= place.name %></td>
+ 		    <td>Price (1-5): <%= place.price %></td>
+        <td><%= link_to 'Show', place %></td>
+        <td><%= link_to 'New', new_place_path(place) %></td>
+        <td><%= link_to 'Edit', edit_place_path(place) %></td>
+        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
